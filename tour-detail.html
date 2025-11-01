@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about tour packages from The Looong Weekend">
+    <title>Tour Details - The Looong Weekend</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.jpg" alt="The Looong Weekend Logo">
+                <span class="logo-text">The Looong Weekend</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 4rem 2rem;">
+        <div class="container">
+            <a href="tours.html" style="color: white; text-decoration: underline; margin-bottom: 1rem; display: inline-block;">← Back to Tours</a>
+            <div id="tour-hero-content">
+                <div class="loading" style="color: white;">Loading tour details...</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="grid grid-2" style="gap: 3rem; align-items: start;">
+                <!-- Main Content -->
+                <div>
+                    <div id="tour-main-content">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div id="tour-sidebar">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interested in This Tour?</h2>
+                <p>Get in touch with us to book or ask questions</p>
+            </div>
+            <div class="text-center">
+                <a href="#" id="contact-link" class="cta-button" style="margin-right: 1rem;">Contact Us</a>
+                <a href="tours.html" class="cta-button" style="background-color: var(--secondary-color);">View All Tours</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Other Tours You Might Like</h2>
+                <p>Explore more amazing weekend getaways</p>
+            </div>
+            <div class="grid grid-3" id="related-tours">
+                <div class="loading">Loading related tours...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Looong Weekend</h3>
+                <p>Transform your weekends into extraordinary adventures.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" data-social="facebook"></a>
+                    <a href="#" aria-label="Instagram" data-social="instagram"></a>
+                    <a href="#" aria-label="Twitter" data-social="twitter"></a>
+                    <a href="#" aria-label="LinkedIn" data-social="linkedin"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="tours.html">Our Tours</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p id="footer-email">Loading...</p>
+                <p id="footer-phone">Loading...</p>
+                <p id="footer-address">Loading...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> The Looong Weekend. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/shared-utils.js"></script>
+    <script src="assets/js/page-templates.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/social-icons.js"></script>
+    <script>
+        let allTours = [];
+        let currentTour = null;
+
+        function getTourIdFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            return id ? parseInt(id) : null;
+        }
+
+        async function loadAllTours() {
+            try {
+                allTours = await DataLoader.loadTours();
+            } catch (error) {
+                console.error('Failed to load tours:', error);
+            }
+        }
+
+        async function loadTourDetails() {
+            const tourId = getTourIdFromURL();
+            
+            if (!tourId) {
+                document.getElementById('tour-hero-content').innerHTML = '<h1 style="color: white;">Tour Not Found</h1><p style="color: white;">Please select a tour from the <a href="tours.html" style="color: white; text-decoration: underline;">tours page</a>.</p>';
+                return;
+            }
+
+            await loadAllTours();
+            currentTour = allTours.find(t => t.id === tourId);
+            
+            if (!currentTour) {
+                document.getElementById('tour-hero-content').innerHTML = '<h1 style="color: white;">Tour Not Found</h1><p style="color: white;">The tour you\'re looking for doesn\'t exist.</p>';
+                return;
+            }
+
+            displayTourDetails();
+            loadRelatedTours();
+        }
+
+        function displayTourDetails() {
+            const placeholder = SharedUtils.createImagePlaceholder(800, 400, currentTour.title);
+            
+            // Hero Section
+            document.getElementById('tour-hero-content').innerHTML = `
+                <h1 style="color: white; margin-bottom: 1rem;">${currentTour.title}</h1>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem;">${currentTour.subtitle} • ${currentTour.difficulty} • ${currentTour.category}</p>
+            `;
+
+            // Main Content
+            document.getElementById('tour-main-content').innerHTML = `
+                <div class="card" style="margin-bottom: 2rem;">
+                    <img src="${currentTour.image}" alt="${currentTour.title}" 
+                         style="width: 100%; height: 400px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0;"
+                         onerror="this.src='${placeholder}'">
+                    <div class="card-content">
+                        <h2>About This Tour</h2>
+                        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 2rem;">
+                            ${currentTour.description}
+                        </p>
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Highlights</h3>
+                        <ul class="card-highlights" style="margin-bottom: 2rem;">
+                            ${currentTour.highlights.map(h => `<li style="font-size: 1rem; padding: 0.5rem 0;">${h}</li>`).join('')}
+                        </ul>
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What's Included</h3>
+                        <ul class="card-highlights" style="margin-bottom: 1rem;">
+                            ${currentTour.includes.map(i => `<li style="font-size: 1rem; padding: 0.5rem 0;">${i}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" style="background-color: var(--bg-light);">
+                    <div class="card-content">
+                        <h3>Additional Information</h3>
+                        <div style="display: grid; gap: 1rem; margin-top: 1rem;">
+                            <div>
+                                <strong style="color: var(--text-dark);">Duration:</strong>
+                                <p style="margin: 0.5rem 0; color: var(--text-light);">${currentTour.duration}</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-dark);">Difficulty Level:</strong>
+                                <p style="margin: 0.5rem 0; color: var(--text-light);">${currentTour.difficulty}</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-dark);">Category:</strong>
+                                <p style="margin: 0.5rem 0; color: var(--text-light);">${currentTour.category}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Sidebar
+            document.getElementById('tour-sidebar').innerHTML = `
+                <div class="card" style="position: sticky; top: 100px;">
+                    <div class="card-content">
+                        <div class="card-price" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+                            ${DataLoader.formatPrice(currentTour.price)}
+                        </div>
+                        <p style="color: var(--text-light); margin-bottom: 2rem;">per person</p>
+                        <a href="contact.html?tour=${encodeURIComponent(currentTour.title)}" 
+                           class="card-button" 
+                           style="display: block; text-align: center; margin-bottom: 1rem; font-size: 1.125rem; padding: 1rem;">
+                            Book Now
+                        </a>
+                        <a href="contact.html?tour=${encodeURIComponent(currentTour.title)}&subject=inquiry" 
+                           class="card-button" 
+                           style="display: block; text-align: center; background-color: var(--secondary-color); font-size: 1rem; padding: 0.875rem;">
+                            Ask a Question
+                        </a>
+                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 1rem;">Quick Info</h4>
+                            <div style="display: grid; gap: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Duration:</span>
+                                    <strong>${currentTour.duration}</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Difficulty:</span>
+                                    <strong>${currentTour.difficulty}</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Category:</span>
+                                    <strong>${currentTour.category}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('contact-link').href = `contact.html?tour=${encodeURIComponent(currentTour.title)}`;
+            document.title = `${currentTour.title} - The Looong Weekend`;
+        }
+
+        async function loadRelatedTours() {
+            if (!currentTour) return;
+
+            let relatedTours = allTours
+                .filter(t => t.category === currentTour.category && t.id !== currentTour.id)
+                .slice(0, 3);
+
+            if (relatedTours.length < 3) {
+                const others = allTours
+                    .filter(t => t.id !== currentTour.id && !relatedTours.find(rt => rt.id === t.id))
+                    .slice(0, 3 - relatedTours.length);
+                relatedTours.push(...others);
+            }
+
+            const container = document.getElementById('related-tours');
+            
+            if (relatedTours.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: var(--text-light);">No other tours available at the moment.</p>';
+                return;
+            }
+
+            container.innerHTML = relatedTours.map(tour => 
+                PageTemplates.renderTourCard(tour, { showHighlights: false })
+            ).join('');
+        }
+
+        loadTourDetails();
+        SharedUtils.initializeFooter();
+    </script>
+</body>
+</html>
+

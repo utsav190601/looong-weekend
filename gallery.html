@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our gallery of stunning photos from our tours and destinations.">
+    <title>Gallery - The Looong Weekend</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.jpg" alt="The Looong Weekend Logo">
+                <span class="logo-text">The Looong Weekend</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Photo Gallery</h1>
+            <p>Capture the beauty and adventure of our destinations</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Gallery</h2>
+                <p>Visual memories from our amazing tours and destinations</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem; text-align: center;">
+                <label for="gallery-filter" style="margin-right: 1rem; font-weight: 500;">Filter by Category:</label>
+                <select id="gallery-filter" class="form-select" style="display: inline-block; width: auto; min-width: 200px;">
+                    <option value="all">All Photos</option>
+                    <option value="tours">Tours</option>
+                    <option value="destinations">Destinations</option>
+                    <option value="activities">Activities</option>
+                    <option value="landscapes">Landscapes</option>
+                </select>
+            </div>
+
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Gallery items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Looong Weekend</h3>
+                <p>Transform your weekends into extraordinary adventures.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" data-social="facebook"></a>
+                    <a href="#" aria-label="Instagram" data-social="instagram"></a>
+                    <a href="#" aria-label="Twitter" data-social="twitter"></a>
+                    <a href="#" aria-label="LinkedIn" data-social="linkedin"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="tours.html">Our Tours</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p id="footer-email">Loading...</p>
+                <p id="footer-phone">Loading...</p>
+                <p id="footer-address">Loading...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> The Looong Weekend. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/shared-utils.js"></script>
+    <script src="assets/js/page-templates.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/social-icons.js"></script>
+    <script>
+        let galleryImages = [];
+
+        async function loadGallery(filterCategory = 'all') {
+            try {
+                if (galleryImages.length === 0) {
+                    galleryImages = await DataLoader.loadGallery();
+                }
+                
+                const filteredImages = filterCategory === 'all' 
+                    ? galleryImages 
+                    : galleryImages.filter(img => img.category === filterCategory);
+                
+                const container = document.getElementById('gallery-container');
+                
+                if (filteredImages.length === 0) {
+                    container.innerHTML = '<div class="error">No photos found in this category.</div>';
+                    return;
+                }
+                
+                container.innerHTML = filteredImages.map(img => PageTemplates.renderGalleryItem(img)).join('');
+            } catch (error) {
+                document.getElementById('gallery-container').innerHTML = '<div class="error">Failed to load gallery. Please try again later.</div>';
+            }
+        }
+
+        document.getElementById('gallery-filter').addEventListener('change', function() {
+            loadGallery(this.value);
+        });
+
+        loadGallery();
+        SharedUtils.initializeFooter();
+    </script>
+</body>
+</html>
