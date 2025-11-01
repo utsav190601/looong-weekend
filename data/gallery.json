@@ -1,0 +1,134 @@
+{
+  "galleryImages": [
+    {
+      "src": "assets/images/gallery/coastal-tour-1.jpg",
+      "category": "tours",
+      "title": "Coastal Paradise"
+    },
+    {
+      "src": "assets/images/gallery/coastal-tour-2.jpg",
+      "category": "tours",
+      "title": "Beach Activities"
+    },
+    {
+      "src": "assets/images/gallery/mountain-tour-1.jpg",
+      "category": "tours",
+      "title": "Mountain Adventure"
+    },
+    {
+      "src": "assets/images/gallery/mountain-tour-2.jpg",
+      "category": "tours",
+      "title": "Hiking Trail"
+    },
+    {
+      "src": "assets/images/gallery/city-tour-1.jpg",
+      "category": "tours",
+      "title": "City Explorer"
+    },
+    {
+      "src": "assets/images/gallery/city-tour-2.jpg",
+      "category": "tours",
+      "title": "Historic Landmarks"
+    },
+    {
+      "src": "assets/images/gallery/desert-tour-1.jpg",
+      "category": "tours",
+      "title": "Desert Safari"
+    },
+    {
+      "src": "assets/images/gallery/desert-tour-2.jpg",
+      "category": "tours",
+      "title": "Desert Camp"
+    },
+    {
+      "src": "assets/images/gallery/destination-beach.jpg",
+      "category": "destinations",
+      "title": "Pristine Beach"
+    },
+    {
+      "src": "assets/images/gallery/destination-mountain.jpg",
+      "category": "destinations",
+      "title": "Mountain Peak"
+    },
+    {
+      "src": "assets/images/gallery/destination-city.jpg",
+      "category": "destinations",
+      "title": "Historic City"
+    },
+    {
+      "src": "assets/images/gallery/destination-desert.jpg",
+      "category": "destinations",
+      "title": "Desert Landscape"
+    },
+    {
+      "src": "assets/images/gallery/destination-wine.jpg",
+      "category": "destinations",
+      "title": "Wine Valley"
+    },
+    {
+      "src": "assets/images/gallery/destination-forest.jpg",
+      "category": "destinations",
+      "title": "Forest Reserve"
+    },
+    {
+      "src": "assets/images/gallery/activity-hiking.jpg",
+      "category": "activities",
+      "title": "Hiking Adventure"
+    },
+    {
+      "src": "assets/images/gallery/activity-water-sports.jpg",
+      "category": "activities",
+      "title": "Water Sports"
+    },
+    {
+      "src": "assets/images/gallery/activity-culture.jpg",
+      "category": "activities",
+      "title": "Cultural Experience"
+    },
+    {
+      "src": "assets/images/gallery/activity-camping.jpg",
+      "category": "activities",
+      "title": "Camping Under Stars"
+    },
+    {
+      "src": "assets/images/gallery/landscape-sunset.jpg",
+      "category": "landscapes",
+      "title": "Stunning Sunset"
+    },
+    {
+      "src": "assets/images/gallery/landscape-dawn.jpg",
+      "category": "landscapes",
+      "title": "Beautiful Dawn"
+    },
+    {
+      "src": "assets/images/gallery/landscape-sea.jpg",
+      "category": "landscapes",
+      "title": "Ocean View"
+    },
+    {
+      "src": "assets/images/gallery/landscape-valley.jpg",
+      "category": "landscapes",
+      "title": "Mountain Valley"
+    },
+    {
+      "src": "assets/images/gallery/gallery-01.jpg",
+      "category": "tours",
+      "title": "Gallery Photo 1"
+    },
+    {
+      "src": "assets/images/gallery/gallery-02.jpg",
+      "category": "tours",
+      "title": "Gallery Photo 2"
+    },
+    {
+      "src": "assets/images/gallery/gallery-03.jpg",
+      "category": "tours",
+      "title": "Gallery Photo 3"
+    },
+    {
+      "src": "assets/images/gallery/gallery-04.jpg",
+      "category": "tours",
+      "title": "Gallery Photo 4"
+    }
+  ]
+}

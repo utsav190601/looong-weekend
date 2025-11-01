@@ -1,0 +1,188 @@
+{
+  "tours": [
+    {
+      "id": 1,
+      "title": "Coastal Paradise Weekend",
+      "subtitle": "3 Days / 2 Nights",
+      "price": 499,
+      "duration": "3 days",
+      "difficulty": "Easy",
+      "image": "assets/images/tours/coastal-paradise.jpg",
+      "description": "Escape to stunning coastal destinations with pristine beaches, charming seaside towns, and breathtaking sunsets. Perfect for a relaxing weekend getaway.",
+      "highlights": [
+        "Beachfront accommodation",
+        "Sunset cruise",
+        "Fresh seafood dining",
+        "Beach activities"
+      ],
+      "includes": [
+        "Accommodation",
+        "Meals (2 breakfasts, 2 dinners)",
+        "Guided tours",
+        "Transportation"
+      ],
+      "category": "Beach"
+    },
+    {
+      "id": 2,
+      "title": "Mountain Adventure Escape",
+      "subtitle": "4 Days / 3 Nights",
+      "price": 699,
+      "duration": "4 days",
+      "difficulty": "Moderate",
+      "image": "assets/images/tours/mountain-adventure.jpg",
+      "description": "Experience the thrill of mountain adventures with hiking, camping, and breathtaking panoramic views. Ideal for nature enthusiasts and adventure seekers.",
+      "highlights": [
+        "Mountain hiking trails",
+        "Camping experience",
+        "Wildlife spotting",
+        "Photography opportunities"
+      ],
+      "includes": [
+        "Accommodation",
+        "All meals",
+        "Equipment rental",
+        "Expert guide"
+      ],
+      "category": "Adventure"
+    },
+    {
+      "id": 3,
+      "title": "City Explorer Weekend",
+      "subtitle": "2 Days / 1 Night",
+      "price": 349,
+      "duration": "2 days",
+      "difficulty": "Easy",
+      "image": "assets/images/tours/city-explorer.jpg",
+      "description": "Discover vibrant cities, historic landmarks, and local culture. A perfect blend of sightseeing, dining, and entertainment for urban explorers.",
+      "highlights": [
+        "City tour",
+        "Historic landmarks",
+        "Local cuisine",
+        "Cultural experiences"
+      ],
+      "includes": [
+        "Hotel stay",
+        "Breakfast",
+        "City tour guide",
+        "Entry tickets"
+      ],
+      "category": "Cultural"
+    },
+    {
+      "id": 4,
+      "title": "Desert Safari Experience",
+      "subtitle": "3 Days / 2 Nights",
+      "price": 599,
+      "duration": "3 days",
+      "difficulty": "Moderate",
+      "image": "assets/images/tours/desert-safari.jpg",
+      "description": "Embark on an unforgettable desert adventure with dune bashing, camel rides, stargazing, and traditional Bedouin experiences.",
+      "highlights": [
+        "Desert safari",
+        "Camel rides",
+        "Traditional camp",
+        "Stargazing session"
+      ],
+      "includes": [
+        "Desert camp accommodation",
+        "All meals",
+        "Safari activities",
+        "Cultural performances"
+      ],
+      "category": "Adventure"
+    },
+    {
+      "id": 5,
+      "title": "Wine Country Retreat",
+      "subtitle": "2 Days / 1 Night",
+      "price": 449,
+      "duration": "2 days",
+      "difficulty": "Easy",
+      "image": "assets/images/tours/wine-country.jpg",
+      "description": "Indulge in a luxurious wine country experience with vineyard tours, wine tastings, gourmet dining, and scenic countryside views.",
+      "highlights": [
+        "Vineyard tours",
+        "Wine tasting sessions",
+        "Gourmet dining",
+        "Scenic countryside"
+      ],
+      "includes": [
+        "Boutique hotel",
+        "Breakfast & dinner",
+        "Wine tasting",
+        "Vineyard tour"
+      ],
+      "category": "Luxury"
+    },
+    {
+      "id": 6,
+      "title": "Forest Wilderness",
+      "subtitle": "3 Days / 2 Nights",
+      "price": 549,
+      "duration": "3 days",
+      "difficulty": "Moderate",
+      "image": "assets/images/tours/forest-wilderness.jpg",
+      "description": "Connect with nature in pristine forests with hiking, bird watching, nature photography, and peaceful forest accommodations.",
+      "highlights": [
+        "Forest hiking",
+        "Bird watching",
+        "Nature photography",
+        "Forest lodge stay"
+      ],
+      "includes": [
+        "Forest lodge",
+        "All meals",
+        "Nature guide",
+        "Equipment"
+      ],
+      "category": "Nature"
+    },
+    {
+      "id": 101,
+      "title": "Amazing Tour Experience 1",
+      "subtitle": "Weekend Getaway",
+      "price": 599,
+      "duration": "2-3 days",
+      "difficulty": "Easy",
+      "image": "assets/images/tours/tour-01.jpg",
+      "description": "Discover breathtaking destinations and create unforgettable memories. This tour offers a perfect blend of adventure, culture, and relaxation for your weekend escape.",
+      "highlights": [
+        "Scenic views",
+        "Cultural experiences",
+        "Memorable moments",
+        "Photo opportunities"
+      ],
+      "includes": [
+        "Accommodation",
+        "Meals",
+        "Guided tours",
+        "Transportation"
+      ],
+      "category": "Cultural"
+    },
+    {
+      "id": 102,
+      "title": "Amazing Tour Experience 2",
+      "subtitle": "Weekend Getaway",
+      "price": 599,
+      "duration": "2-3 days",
+      "difficulty": "Easy",
+      "image": "assets/images/tours/tour-02.jpg",
+      "description": "Discover breathtaking destinations and create unforgettable memories. This tour offers a perfect blend of adventure, culture, and relaxation for your weekend escape.",
+      "highlights": [
+        "Scenic views",
+        "Cultural experiences",
+        "Memorable moments",
+        "Photo opportunities"
+      ],
+      "includes": [
+        "Accommodation",
+        "Meals",
+        "Guided tours",
+        "Transportation"
+      ],
+      "category": "Cultural"
+    }
+  ]
+}

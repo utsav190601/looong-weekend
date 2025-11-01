@@ -1,0 +1,22 @@
+{
+  "name": "The Looong Weekend",
+  "tagline": "Transform your weekends into extraordinary adventures",
+  "description": "We specialize in creating unforgettable weekend getaways and extended tours that let you explore the world without taking long breaks from work.",
+  "contact": {
+    "email": "info@thelooongweekend.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Travel Street, Adventure City, AC 12345",
+    "businessHours": {
+      "weekdays": "9:00 AM - 6:00 PM",
+      "weekends": "10:00 AM - 4:00 PM"
+    }
+  },
+  "social": {
+    "facebook": "https://facebook.com/thelooongweekend",
+    "instagram": "https://instagram.com/thelooongweekend",
+    "twitter": "https://twitter.com/thelooongweekend",
+    "linkedin": "https://linkedin.com/company/thelooongweekend"
+  },
+  "mission": "To make travel accessible and memorable, one weekend at a time.",
+  "yearEstablished": 2020
+}

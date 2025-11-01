@@ -1,0 +1,58 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "customerName": "Sarah Johnson",
+      "tourName": "Coastal Paradise Weekend",
+      "rating": 5,
+      "review": "Absolutely amazing experience! The coastal weekend was everything we hoped for and more. Beautiful beaches, great food, and excellent service.",
+      "date": "2024-01-15",
+      "image": "assets/images/testimonials/sarah.jpg"
+    },
+    {
+      "id": 2,
+      "customerName": "Michael Chen",
+      "tourName": "Mountain Adventure Escape",
+      "rating": 5,
+      "review": "The mountain adventure exceeded all expectations. The guides were knowledgeable, the scenery was breathtaking, and the whole experience was well-organized.",
+      "date": "2024-02-10",
+      "image": "assets/images/testimonials/michael.jpg"
+    },
+    {
+      "id": 3,
+      "customerName": "Emma Williams",
+      "tourName": "City Explorer Weekend",
+      "rating": 5,
+      "review": "Perfect weekend getaway! The city tour was comprehensive, and we got to experience so much in just two days. Highly recommend!",
+      "date": "2024-01-28",
+      "image": "assets/images/testimonials/emma.jpg"
+    },
+    {
+      "id": 4,
+      "customerName": "David Martinez",
+      "tourName": "Desert Safari Experience",
+      "rating": 5,
+      "review": "An unforgettable adventure in the desert. The safari, camel rides, and stargazing were incredible. The camp was comfortable and the food was delicious.",
+      "date": "2024-02-20",
+      "image": "assets/images/testimonials/david.jpg"
+    },
+    {
+      "id": 5,
+      "customerName": "Lisa Anderson",
+      "tourName": "Wine Country Retreat",
+      "rating": 5,
+      "review": "Luxurious and relaxing! The wine tasting sessions were wonderful, and the vineyard tour was informative. Perfect for wine enthusiasts.",
+      "date": "2024-03-05",
+      "image": "assets/images/testimonials/lisa.jpg"
+    },
+    {
+      "id": 6,
+      "customerName": "James Thompson",
+      "tourName": "Forest Wilderness",
+      "rating": 5,
+      "review": "A peaceful escape into nature. The forest lodge was cozy, the hiking trails were well-marked, and we saw amazing wildlife. Truly rejuvenating!",
+      "date": "2024-02-15",
+      "image": "assets/images/testimonials/james.jpg"
+    }
+  ]
+}

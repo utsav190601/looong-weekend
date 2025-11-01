@@ -1,0 +1,116 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Coastal Beaches",
+      "region": "Pacific Coast",
+      "image": "assets/images/destinations/coastal-beaches.jpg",
+      "description": "Pristine sandy beaches with crystal-clear waters, perfect for relaxation and water sports.",
+      "bestTime": "May - September",
+      "highlights": [
+        "Beach activities",
+        "Water sports",
+        "Sunset views",
+        "Seafood cuisine"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mountain Peaks",
+      "region": "Alpine Region",
+      "image": "assets/images/destinations/mountain-peaks.jpg",
+      "description": "Majestic mountain ranges offering hiking, climbing, and breathtaking panoramic views.",
+      "bestTime": "June - October",
+      "highlights": [
+        "Hiking trails",
+        "Scenic vistas",
+        "Wildlife",
+        "Mountain camping"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Historic Cities",
+      "region": "Cultural Hub",
+      "image": "assets/images/destinations/historic-cities.jpg",
+      "description": "Vibrant cities rich in history, culture, architecture, and culinary experiences.",
+      "bestTime": "Year-round",
+      "highlights": [
+        "Historic landmarks",
+        "Museums",
+        "Local cuisine",
+        "Cultural events"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Desert Lands",
+      "region": "Arid Region",
+      "image": "assets/images/destinations/desert-lands.jpg",
+      "description": "Vast desert landscapes with unique ecosystems, starry nights, and adventure activities.",
+      "bestTime": "October - April",
+      "highlights": [
+        "Desert safaris",
+        "Stargazing",
+        "Cultural camps",
+        "Sand dunes"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Wine Valleys",
+      "region": "Vineyard Region",
+      "image": "assets/images/destinations/wine-valleys.jpg",
+      "description": "Rolling vineyards and wineries offering wine tasting, gourmet dining, and scenic beauty.",
+      "bestTime": "March - November",
+      "highlights": [
+        "Vineyard tours",
+        "Wine tasting",
+        "Gourmet dining",
+        "Scenic views"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Forest Reserves",
+      "region": "Green Belt",
+      "image": "assets/images/destinations/forest-reserves.jpg",
+      "description": "Lush forests teeming with wildlife, perfect for nature lovers and eco-tourism.",
+      "bestTime": "Year-round",
+      "highlights": [
+        "Forest trails",
+        "Wildlife spotting",
+        "Nature photography",
+        "Eco-lodges"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "Beautiful Destination 1",
+      "region": "Various",
+      "image": "assets/images/destinations/destination-01.jpg",
+      "description": "A stunning destination offering unique experiences and breathtaking scenery. Perfect for travelers seeking adventure and discovery.",
+      "bestTime": "Year-round",
+      "highlights": [
+        "Scenic beauty",
+        "Cultural richness",
+        "Adventure opportunities",
+        "Photography spots"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Beautiful Destination 2",
+      "region": "Various",
+      "image": "assets/images/destinations/destination-02.jpg",
+      "description": "A stunning destination offering unique experiences and breathtaking scenery. Perfect for travelers seeking adventure and discovery.",
+      "bestTime": "Year-round",
+      "highlights": [
+        "Scenic beauty",
+        "Cultural richness",
+        "Adventure opportunities",
+        "Photography spots"
+      ]
+    }
+  ]
+}
