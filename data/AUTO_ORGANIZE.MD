@@ -1,5 +1,4 @@
 # Auto-Organize Images - Quick Guide
-
 ## 🚀 How It Works
 
 Just drop your Instagram photos into the folders, and the script will automatically:
